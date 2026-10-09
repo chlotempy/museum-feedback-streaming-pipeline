@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is an **ETL (Extract, Transform, Load) pipeline** that processes real-time visitor interaction data from museum kiosks at the London Natural History Museum (LMNH). The pipeline captures two types of interactions:
+This is an **ETL (Extract, Transform, Load) pipeline** that processes real-time visitor interaction data from museum kiosks at the Liverpool Natural History Museum (LMNH). The pipeline captures two types of interactions:
 
 1. **Exhibition Ratings**: Visitors can rate exhibitions on a scale of 0-4
 2. **Assistance Requests**: Visitors can request assistance from museum staff
@@ -10,7 +10,7 @@ This is an **ETL (Extract, Transform, Load) pipeline** that processes real-time 
 ### How It Works
 
 The pipeline:
-1. **Consumes** raw messages from an Apache Kafka cluster (AWS MSK)
+1. **Consumes** raw messages from an Apache Kafka cluster
 2. **Validates & Cleans** the data according to business rules (filtering invalid entries, staff interference, mechanical errors)
 3. **Enriches** the data with exhibition and rating mappings from a lookup database
 4. **Batches** the records (100 records or 10 seconds) to optimize database writes
